@@ -2,7 +2,7 @@
 * @Author: José Carlos Rodríguez Cortés
 * @Date:   08/07/2017  01:06:15
 * @Last Modified by:   José Carlos Rodríguez Cortés
-* @Last Modified time: 08/07/2017  02:34:23
+* @Last Modified time: 08/07/2017  02:53:46
 */
 
 #include <iostream>
@@ -23,12 +23,15 @@ int getRandomNumber (int min, int max);
 
 int main(){
 	srand(time(NULL));
-	map* mapa = new map();
+	map* mapa = new map(10);
+	mapa -> printMap();
+	/*
 	vector<agent> agentes;
 	for (int i = 0; i < N_AGENTS; i++) {
 		agentes.push_back(CreateAgent(i, mapa));
 		agentes[i].printAgent();
 	}
+	*/
     return 0;
 }
 

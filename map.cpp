@@ -2,31 +2,31 @@
 * @Author: José Carlos Rodríguez Cortés
 * @Date:   08/07/2017  01:27:33
 * @Last Modified by:   José Carlos Rodríguez Cortés
-* @Last Modified time: 08/07/2017  02:30:53
+* @Last Modified time: 08/07/2017  02:53:23
 */
 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
 #include "map.h"
-#define MAP_SIZE 100
+#define MAP_SIZE 30
 
 using namespace std;
 
-int getRandomNumber (int min, int max) {
+int getRand (int min, int max) {
 	return rand() % (max - min) + min;
 }
 
 map::map(int itemFrequency) {
 	srand(time(NULL));
+	setPosiciones(vector<item>());
 	for (int i = 0; i < MAP_SIZE; i++) {
 		for (int j = 0; j < MAP_SIZE; j++) {
-			getPosiciones().push_back(item('O'));
+			posiciones.push_back(item('O'));
 		}
 	}
-
 	for (int i = 0; i < (itemFrequency * MAP_SIZE * MAP_SIZE) / 100; i++) {
-		setItem(getRandomNumber(0, 100), getRandomNumber(0,100), item('F'));
+		setItem(getRand(0, MAP_SIZE - 1), getRand(0, MAP_SIZE - 1), item('F'));
 	}
 }
 

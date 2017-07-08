@@ -2,7 +2,7 @@
 * @Author: José Carlos Rodríguez Cortés
 * @Date:   08/07/2017  01:27:38
 * @Last Modified by:   José Carlos Rodríguez Cortés
-* @Last Modified time: 08/07/2017  02:31:21
+* @Last Modified time: 08/07/2017  02:43:25
 */
 
 #pragma once
@@ -18,7 +18,7 @@ class map {
 private: 
 	vector<item> posiciones;
 public:
-	map();
+	map(int itemFrequency);
 	~map();
 	vector<item> getPosiciones();
 	void setPosiciones(vector<item> posiciones);
