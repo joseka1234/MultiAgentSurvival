@@ -5,8 +5,6 @@
 * @Last Modified time: 08/07/2017  02:31:37
 */
 
-
-#pragma once
 #ifndef AGENT_H
 #define AGENT_H
 
@@ -25,13 +23,16 @@ private:
 	int health;
 	int intelligence;
 	int strength;
+	int speed;
 	point position;
 	map* mapa;
 public:
-	agent(string _name, int _health, int _intelligence, int _strength, point _position, map* _mapa);
+	// Constructors y Destructors
+	agent(string _name, int _health, int _intelligence, int _strength, int _speed, point _position, map* _mapa);
 	agent();
 	~agent();
 
+	// Getters y Setters
 	string getName();
 	void setName(string _name);
 	int getHealth();
@@ -40,6 +41,8 @@ public:
 	void setIntelligence(int _intelligence);
 	int getStrength();
 	void setStrength(int _strength);
+	int getSpeed();
+	void setSpeed(int _speed);
 	point getPosition();
 	void setPosition(point _position);
 	map* getMapa();

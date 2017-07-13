@@ -5,9 +5,8 @@
 * @Last Modified time: 08/07/2017  02:17:58
 */
 
-#pragma once
-#ifndef ITEM
-#define ITEM
+#ifndef ITEM_H
+#define ITEM_H
 
 class item {
 private: 

@@ -5,9 +5,8 @@
 * @Last Modified time: 08/07/2017  02:43:25
 */
 
-#pragma once
-#ifndef MAP
-#define MAP
+#ifndef MAP_H
+#define MAP_H
 
 #include <vector>
 #include "item.h"

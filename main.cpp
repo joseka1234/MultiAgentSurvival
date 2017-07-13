@@ -10,7 +10,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <string>
-#include <sstream>
+// #include <sstream>
 #include "agent.h"
 #include "map.h"
 
@@ -40,7 +40,7 @@ agent CreateAgent(int nameIndex, map* mapa) {
 	punto.x = getRandomNumber(0,100);
 	punto.y = getRandomNumber(0,100);
 	agent agente(
-			to_string(nameIndex),
+			nameIndex + "",
 			getRandomNumber(80,120),
 			getRandomNumber(5,20),
 			getRandomNumber(5,20),

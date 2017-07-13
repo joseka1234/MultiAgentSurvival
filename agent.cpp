@@ -9,17 +9,18 @@
 #include <iostream>
 using namespace std;
 
-agent::agent(string _name, int _health, int _intelligence, int _strength, point _position, map* _mapa) {
+agent::agent(string _name, int _health, int _intelligence, int _strength, int _speed, point _position, map* _mapa) {
 	setName(_name);
 	setHealth(_health);
 	setIntelligence(_intelligence);
 	setStrength(_strength);
+	setSpeed(_speed);
 	setPosition(_position);
 	setMapa(_mapa);
 }
 
 agent::agent() {
-	setName("1");
+	setName("-1");
 	setHealth(0);
 	setIntelligence(0);
 	setStrength(0);
@@ -73,6 +74,14 @@ int agent::getStrength() {
 
 void agent::setStrength(int _strength) {
 	strength = _strength;
+}
+
+int agent::getSpeed() {
+	return speed;
+}
+
+void agent::setSpeed(int _speed) {
+	speed = _speed;
 }
 
 point agent::getPosition() {
